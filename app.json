@@ -1,0 +1,37 @@
+{
+  "expo": {
+    "name": "Book Cricket Simulator",
+    "slug": "cricket-simulator",
+    "version": "1.2.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "versionCode":4,
+      "config": {
+        "googleMobileAdsAppId": "NA-NA-NA"
+      },
+      "package": "com.msholodev.book_cricket"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}
