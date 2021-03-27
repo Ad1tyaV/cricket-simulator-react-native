@@ -16,7 +16,7 @@ export default function ScoreScreen(){
     const allTeams = useSelector(state=>state.allTeams)
     const tracker = useSelector(state=>state.trackReducer)
     const dispatch = useDispatch()
-    const interstitialID = useRef("ca-app-pub-5948657279053587/7704923959")
+    const interstitialID = useRef("YOUR_CODE")
     const [message, setMessage] = useState("")
     //const track = useRef({})
     function handleBackButtonClick() {
