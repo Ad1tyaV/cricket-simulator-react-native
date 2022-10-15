@@ -1,20 +1,16 @@
 import { StyleSheet, Text, View, SafeAreaView, Button } from 'react-native';
 import {Picker} from '@react-native-picker/picker';
-import { useSelector,useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import teamPicker from '../redux-setup/actions/teamPicker'
 import React,{useState,useEffect} from 'react';
 import { BackHandler,Alert } from 'react-native';
 import resetTracker from '../redux-setup/actions/resetTracker';
 
 
-
-
-
 export default function TeamPicker() {
-    const [teams, setTeams] = useState(["India","Pakistan","England","Australia","NewZealand","SouthAfrica"])
-    const [team1,setTeam1]=useState("India")
-    const [team2,setTeam2]=useState("Pakistan")
-    const state = useSelector(state => state.manageScores)
+    const [teams, setTeams] = useState(["India","Pakistan","England","Australia","NewZealand","SouthAfrica", "WestIndies", "SriLanka"])
+    const [team1,setTeam1] = useState("India")
+    const [team2,setTeam2] = useState("Pakistan")    
     const dispatch = useDispatch()
 
     function handleBackButtonClick() {
@@ -41,12 +37,19 @@ export default function TeamPicker() {
             setTeam1(itemValue)
         }>
             {
-                teams.map((team)=>{
+                Array.from(new Set(teams)).map((team)=>{
                     return team!=team2?<Picker.Item key={Date.now()}label={team} value={team}/>:[]
                 })
             }        
         </Picker>
-
+        <Text>{`\n`}</Text>
+        <Button title="SWAP" onPress={
+                ()=>{                    
+                    setTeam2(team1)
+                    setTeam1(team2)
+                }
+            }
+        />
         <Picker
             selectedValue={team2}
             style={{height: 50, width: 180}}
@@ -54,7 +57,7 @@ export default function TeamPicker() {
             setTeam2(itemValue)
         }>
             {
-                teams.map((team)=>{
+                Array.from(new Set(teams)).map((team)=>{
                     return team!==team1?<Picker.Item key={Date.now()}label={team} value={team}/>:[]
                 })
             }        

@@ -42,9 +42,6 @@ export default function TabViewExample(props) {
   });
 
   return (    
-
-    
-
     <ScrollView>  
     <TabView
       navigationState={{ index, routes }}

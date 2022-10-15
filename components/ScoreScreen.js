@@ -34,9 +34,9 @@ export default function ScoreScreen(){
       }, []);
 
     const showAd=async()=>{
-        AdMobInterstitial.setAdUnitID(interstitialID.current);
-        await AdMobInterstitial.requestAdAsync({servePersonalizedAds:true})  
-        await AdMobInterstitial.showAdAsync();
+        // AdMobInterstitial.setAdUnitID(interstitialID.current);
+        // await AdMobInterstitial.requestAdAsync({servePersonalizedAds:true})  
+        // await AdMobInterstitial.showAdAsync();
     }  
     useEffect(()=>{
         if(message===""){}
@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
     score:{        
         justifyContent:'center',
         alignItems:'center',
-        paddingTop:25,                
+        paddingTop:25
     },
     dialog:{
         fontSize:18,

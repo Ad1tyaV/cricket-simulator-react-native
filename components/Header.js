@@ -1,16 +1,11 @@
 import React from 'react';
-import { StyleSheet, Text, View, SafeAreaView,StatusBar } from 'react-native';
+import { StyleSheet, Text, SafeAreaView,StatusBar } from 'react-native';
 
 
 export default function Header() {
   return (
-    
-    // <SafeAreaView style={styles.header}>      
-    //   <Text style={styles.text}>Cricket Simulator</Text>
-    // </SafeAreaView>
     <SafeAreaView>
-    <StatusBar barStyle = "dark-content" hidden = {false} backgroundColor = "darkslateblue" translucent = {true}/>
-    
+    <StatusBar barStyle = "dark-content" hidden = {false} backgroundColor = "darkslateblue" translucent = {true}/>    
     <Text style={styles.text}>Book Cricket Simulator!</Text>
     </SafeAreaView>
     

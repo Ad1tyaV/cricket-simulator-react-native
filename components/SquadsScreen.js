@@ -1,8 +1,7 @@
-import { SafeAreaView,StyleSheet, TouchableOpacity } from "react-native";
+import { StyleSheet } from "react-native";
 import { useSelector,useDispatch } from 'react-redux';
 import React from 'react';
 import { Text,ScrollView  } from "react-native";
-import {ExpandableListView} from 'react-native-expandable-listview';
 
 
 export default function SquadsScreen(){
